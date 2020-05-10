@@ -11,10 +11,9 @@ linkList.add(-10);
 linkList.add(-3);
 linkList.add(4);
 
-//const sorter = new Sorter(numbersCollection);
-// const sorter = new Sorter(characters);
-const sorter = new Sorter(linkList);
-
-linkList.print();
-sorter.sort();
+numbersCollection.sort();
+characters.sort();
+linkList.sort();
+console.log(numbersCollection.data);
+console.log(characters.data);
 linkList.print();
