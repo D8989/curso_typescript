@@ -1,10 +1,10 @@
-import { CsvFileReader } from './CsvFileReader';
 import { MatchResult } from './MatchResult';
+import { MatchReader } from './MatchReader';
 
-const reader = new CsvFileReader('original.csv');
+const reader = new MatchReader('original.csv');
 reader.read();
 
-console.log(reader.data);
+const dateOfFirstMatch = reader.data[0][0];
 
 let manUnitedWins = 0;
 
