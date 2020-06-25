@@ -49,5 +49,14 @@ export class User {
     });
   }
 
-  save() {}
+  save(): void {
+    this.sync
+      .save(this.attributes.getAll())
+      .then((response: AxiosResponse): void => {
+        this.trigger('save');
+      })
+      .catch(() => {
+        this.trigger('error');
+      });
+  }
 }
